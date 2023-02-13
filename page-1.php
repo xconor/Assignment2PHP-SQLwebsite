@@ -9,7 +9,7 @@
     <title>Starter Template · Bootstrap v5.0</title>
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this template -->  
     <link href="mystyle.css" rel="stylesheet">
   </head>
   <body>
