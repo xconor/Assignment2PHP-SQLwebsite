@@ -27,13 +27,13 @@
           <span class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.html">Page 1</a>
+                <a class="nav-link" aria-current="page" href="page-1.php">Page 1</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.html">Page 2</a>
+                <a class="nav-link" aria-current="page" href="page-3.php">Page 2</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.html">Page 3</a>
+                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
               </li>
             </ul>
           </span>
