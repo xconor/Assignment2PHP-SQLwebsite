@@ -1,3 +1,15 @@
+<?php
+require_once('database.php');
+
+// Get menu items
+$queryMenu = 'SELECT itemID, itemName, itemDescription, itemPrice FROM menu_items';
+$statement = $db->prepare($queryMenu);
+$statement->execute();
+$menuItems = $statement->fetchAll();
+$statement->closeCursor();
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +28,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Site Title</a>
+        <a class="navbar-brand" href="index.html">Conor's Restaurant</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,13 +39,13 @@
           <span class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.php">Page 1</a>
+                <a class="nav-link" aria-current="page" href="page-1.php">Staff</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-2.php">Page 2</a>
+                <a class="nav-link" aria-current="page" href="page-2.php">Waiters</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
+                <a class="nav-link" aria-current="page" href="page-3.php">Contact Us</a>
               </li>
             </ul>
           </span>
@@ -43,9 +55,44 @@
 
 <main class="container">
   <div class="starter-template text-center">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
+    
+<!-- the body section -->
+<body>
+<header><h1>Restaurant Menu</h1></header>
+<main>
+    <h1>Menu List</h1>
+    <section>
+        <!-- display a table of menu items -->
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Delete</th>
+            </tr>
+
+            <?php foreach ($menuItems as $menuItem) : ?>
+        <tr>
+            <td><?php echo $menuItem['itemName']; ?></td>
+            <td><?php echo $menuItem['itemDescription']; ?></td>
+            <td class="right">$<?php echo number_format($menuItem['itemPrice'], 2); ?></td>
+            <td>
+                <form action="delete_item.php" method="post">
+                    <input type="hidden" name="item_id"
+                           value="<?php echo $menuItem['itemID']; ?>">
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
+        </tr>
+
+    <?php endforeach; ?>
+</table>
+
+</section>
+</main>
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> Restaurant, Inc.</p>
+</footer>
 
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>
