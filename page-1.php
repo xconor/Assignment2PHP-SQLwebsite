@@ -44,5 +44,4 @@ $statement->closeCursor();
     </section>
   </div><!-- /.starter-template -->
 </main><!-- /.container -->
-
 <?php include 'includes/footer.php';?>
