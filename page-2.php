@@ -17,6 +17,9 @@ $statement->closeCursor();
 <!-- the body section -->
 <header><h1>Waiters</h1></header>
     <p class="lead">We are proud to have extremely professional waiters that can help you with anything.</p>
+    <img src="images/waiters.jpg" class="img-fluid" alt="picture of waiters">
+    <br></br>
+
     <section>
         <!-- display a table of waiters -->
         <div class="table-responsive">
