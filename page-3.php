@@ -19,7 +19,7 @@
       <label for='name'>Your Name:</label> <br>
       <input type="text" name="name" placeholder="Full Name">
     </p>
-    <p>
+ <p>
     <label for='email'>Email Address:</label> <br>
     <input type="email" name="email" placeholder="e.g. d00261104@dkit.ie" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <br>
   </p>

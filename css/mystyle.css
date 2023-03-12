@@ -1,9 +1,12 @@
 /* Add your own CSS under here */
 footer {
     background-color: #c2b280;
-    color: #fff;
+    color: #333; 
+    padding: 20px; 
+    text-align: center; 
+    font-size: 14px; 
   }
-  
+
   .error {
     color: #ff0000;
   }
@@ -69,7 +72,7 @@ footer {
   
   table th {
     background-color: #8B4513;
-    color: #fff;
+    color: #333;
     text-align: left;
   }
   
