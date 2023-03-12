@@ -21,7 +21,8 @@ $statement->closeCursor();
 <main>
     <section>
         <!-- display a table of menu items -->
-        <table>
+        <div class="table-responsive">
+        <table class="table table-striped">
             <tr>
                 <th>Name</th>
                 <th>Description</th>
@@ -36,6 +37,8 @@ $statement->closeCursor();
         </tr>
     <?php endforeach; ?>
 </table>
+        </div>
+
 </section>
 </main><!-- /.container -->
 <?php include 'includes/footer.php';?>
