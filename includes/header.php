@@ -1,15 +1,3 @@
-<?php
-require_once('database.php');
-
-// Get menu items
-$queryMenu = 'SELECT itemID, itemName, itemDescription, itemPrice FROM menu_items';
-$statement = $db->prepare($queryMenu);
-$statement->execute();
-$menuItems = $statement->fetchAll();
-$statement->closeCursor();
-
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
