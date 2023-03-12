@@ -20,13 +20,13 @@
       <input type="text" name="name" placeholder="Full Name">
     </p>
     <p>
-      <label for='email'>Email Address:</label> <br>
-      <input type="text" name="email" placeholder="e.g. d00261104@dkit.ie" required> <br>
-    </p>
-    <p>
-      <label for='phone'>Phone Number:</label> <br>
-      <input type="tel" name="phone" placeholder="Add Phone Number">
-    </p>
+    <label for='email'>Email Address:</label> <br>
+    <input type="email" name="email" placeholder="e.g. d00261104@dkit.ie" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <br>
+  </p>
+  <p>
+    <label for='phone'>Phone Number:</label> <br>
+    <input type="tel" name="phone" placeholder="Add Phone Number" pattern="[0-9]{10,}"> <br>
+  </p>
     <p>
       <label for='subject'>Subject:</label> <br>
       <input type="text" name="subject">
